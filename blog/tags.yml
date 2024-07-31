@@ -2,3 +2,14 @@ docusaurus:
   label: Docusaurus
   permalink: /docusaurus
   description: Docusaurus tag description
+
+traefik:
+  label: traefik
+  permalink: /traefik
+  description: https://doc.traefik.io/traefik/
+
+k8s:
+  label: k8s
+  permalink: /k8s
+  description: https://kubernetes.io/
+  
