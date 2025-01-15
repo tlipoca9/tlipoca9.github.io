@@ -1,0 +1,32 @@
+---
+sidebar_position: 1
+sidebar_label: 基于 OpenCloudOS 安装 NixOS
+---
+
+# 基于 OpenCloudOS 安装 NixOS
+
+本文档介绍了如何在 OpenCloudOS 上安装 NixOS。
+
+## 参考文档
+
+- [Install NixOS from existing Linux](https://discourse.nixos.org/t/install-nixos-from-existing-linux/6856)
+- [nixos-infect](https://github.com/elitak/nixos-infect)
+
+## 操作步骤
+
+1. 在腾讯云上创建一个 OpenCloudOS 9 的实例, 以下称为 `OpenCloudOS`。
+
+2. 绑定 SSH 密钥到 `OpenCloudOS` 的 root 用户。
+
+3. 在 `OpenCloudOS` 上配置代理，以克服国内 GFW 的限制。
+
+```bash
+export HTTP_PROXY=http://<proxy>:<port>
+export HTTPS_PROXY=http://<proxy>:<port>
+```
+
+4. 在 `OpenCloudOS` 上执行 `nixos-infect` 脚本。
+
+```bash
+curl https://raw.githubusercontent.com/elitak/nixos-infect/master/nixos-infect | NIX_CHANNEL=nixos-24.11 bash -x
+```
