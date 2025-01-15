@@ -21,12 +21,15 @@ sidebar_label: 基于 OpenCloudOS 安装 NixOS
 3. 在 `OpenCloudOS` 上配置代理，以克服国内 GFW 的限制。
 
 ```bash
-export HTTP_PROXY=http://<proxy>:<port>
-export HTTPS_PROXY=http://<proxy>:<port>
+PROXY_ADDRESS=http://<proxy_ip>:<proxy_port>
+export HTTP_PROXY=$PROXY_ADDRESS
+export HTTPS_PROXY=$PROXY_ADDRESS
 ```
 
 4. 在 `OpenCloudOS` 上执行 `nixos-infect` 脚本。
 
 ```bash
-curl https://raw.githubusercontent.com/elitak/nixos-infect/master/nixos-infect | NIX_CHANNEL=nixos-24.11 bash -x
+set -x
+curl https://raw.githubusercontent.com/elitak/nixos-infect/master/nixos-infect | \
+HTTP_PROXY=$HTTP_PROXY HTTPS_PROXY=$HTTPS_PROXY NIX_CHANNEL=nixos-24.11 bash
 ```
