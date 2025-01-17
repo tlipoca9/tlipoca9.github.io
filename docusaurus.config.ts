@@ -125,8 +125,8 @@ const config: Config = {
     // },
     prism: {
       // themes: https://github.com/FormidableLabs/prism-react-renderer/tree/master/packages/prism-react-renderer/src/themes
-      theme: prismThemes.oneLight,
-      darkTheme: prismThemes.oneDark,
+      theme: prismThemes.dracula,
+      darkTheme: prismThemes.dracula,
       // default support languages: https://github.com/FormidableLabs/prism-react-renderer/blob/master/packages/generate-prism-languages/index.ts#L9-L23
       // support languages: https://prismjs.com/#supported-languages
       additionalLanguages: [
