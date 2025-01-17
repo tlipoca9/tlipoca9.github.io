@@ -132,7 +132,7 @@ const config: Config = {
       additionalLanguages: [
         'bash',
         'powershell',
-        'dockerfile',
+        'docker',
       ]
     },
   } satisfies Preset.ThemeConfig,
